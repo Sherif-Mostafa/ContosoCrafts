@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Sherif !</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="card col-md-4">
+            <img class="card-img h-50 w-50" src="@product.Image" />
+            <h2 class="card-body">@product.Title</h2>
+        </div>
+    }
+</div>
